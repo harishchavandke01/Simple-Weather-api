@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "sans-serif";
+    background-color: #f7f7f7;
+}
+
+.container{
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    
+}
+
+form input{
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    width: 60%;
+    border-top: 1px solid #000777 ;
+    border-left: 1px solid #000777 ;
+    border-bottom: 1px solid #000777 ;
+    
+}
+
+
+form button{
+    background-color: #000777;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition:background-color 0.3s ease;
+    border-top: 2px solid #000777 ;
+    border-bottom:2px solid #000777 ;
+}
+
+form button:hover{
+    background-color:  #010534;
+}
+
+.display-city{
+    font-size: 20px;
+}
+
+.icon img{
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.temparature{
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.description{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.details > div{
+    padding: 20px;
+    background-color: antiquewhite;
+    margin:10px;
+    flex: 1;
+    border-radius: 5px;
+    text-align: center;
+    min-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+}
+
+@media (max-width:768px)
+{
+    form{
+        flex-direction: column;
+    }
+    form input{
+        width: 100%;
+        margin-bottom: 10px;
+        border-right: 1px solid #000777 ;
+        transition: all 0.5s ease-in-out;
+    }
+    form button{
+        transition: all 0.5s ease-in-out;
+
+    }
+}
