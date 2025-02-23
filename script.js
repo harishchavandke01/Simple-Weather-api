@@ -31,9 +31,9 @@ async function getWeatherData(cityValue)
         let imgCode = data["weather"][0].icon;
 
         const details = [
-            `Feels like = ${Math.round(data["main"].feels_like)}`,
-            `Humidity = ${data["main"].humidity}`,
-            `WindSpeed = ${data["wind"].speed}`
+            `Feels like = ${Math.round(data["main"].feels_like)} °C`,
+            `Humidity = ${data["main"].humidity} %`,
+            `WindSpeed = ${data["wind"].speed} m/s`
         ]
 
 
@@ -41,7 +41,7 @@ async function getWeatherData(cityValue)
         weatherDataEl.querySelector("img").src = imgUrl;
         weatherDataEl.querySelector(".temparature").innerText = `${temp} °C`;
         weatherDataEl.querySelector(".description").innerText =  `${description}`;
-        weatherDataEl.querySelector(".details").innerHTML = details.map((detail)=>`<div>${detail}</div>`)
+        weatherDataEl.querySelector(".details").innerHTML = details.map((detail)=>`<div>${detail}</div>`).join("");
 
     } catch (error) {
         console.log(error)
